@@ -1,0 +1,71 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "smark/golden-text",
+  "version": "0.1.0",
+  "title": "Golden Text",
+  "category": "text",
+  "icon": "editor-strikethrough",
+  "description": "Golden Text: A WordPress block that renders the effect of text dipped in gold.",
+  "supports": {
+    "align": true,
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": false
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "none"
+    },
+    "textinput": {
+      "type": "string",
+      "default": "Gold Rush",
+      "source": "text",
+      "selector": "section div"
+    },
+    "textalign": {
+      "type": "string",
+      "default": "center"
+    },
+    "boxwidth": {
+      "type": "number",
+      "default": 47
+    },
+    "fontsize": {
+      "type": "number",
+      "default": 6
+    }
+  },
+  "styles": [
+    {
+      "name": "rounded",
+      "label": "Rounded"
+    },
+    {
+      "name": "squared",
+      "label": "Squared",
+      "isDefault": true
+    }
+  ],
+  "example": {
+    "attributes": {
+      "textinput": "Gold Rush",
+      "textalign": "center",
+      "fontsize": 18
+    },
+    "style": {
+      "padding": "1em"
+    }
+  },
+  "textdomain": "smark",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
