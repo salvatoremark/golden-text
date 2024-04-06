@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Golden Text
- * Description:       Golde Text: A WordPress block that creats the effect of text cast in gold.
+ * Description:       Applies a gold leaf effect to the edges of text in 3D.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0

@@ -10,6 +10,9 @@
 }
 
 .wp-block-smark-golden-text {
+  white-space: nowrap;
+  max-width: none;
+
   &.wrapper {
     display: grid;
     grid-template-areas: "overlap";

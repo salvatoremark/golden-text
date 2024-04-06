@@ -1,7 +1,7 @@
 {
   "name": "golden-text",
   "version": "0.1.0",
-  "description": "Golden Text: A WordPress block that renders the effect of text dipped in gold",
+  "description": "Applies a gold leaf effect to the edges of text in 3D.",
   "author": "Mark Salvatore",
   "license": "GPL-2.0-or-later",
   "main": "build/index.js",

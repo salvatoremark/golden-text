@@ -6,7 +6,7 @@
   "title": "Golden Text",
   "category": "text",
   "icon": "editor-strikethrough",
-  "description": "Golden Text: A WordPress block that renders the effect of text dipped in gold.",
+  "description": "Applies a gold leaf effect to the edges of text in 3D.",
   "supports": {
     "align": true,
     "html": false,
@@ -28,7 +28,7 @@
       "type": "string",
       "default": "Gold Rush",
       "source": "text",
-      "selector": "section div"
+      "selector": "div div"
     },
     "textalign": {
       "type": "string",
@@ -40,7 +40,7 @@
     },
     "fontsize": {
       "type": "number",
-      "default": 6
+      "default": 8
     }
   },
   "styles": [
@@ -59,9 +59,6 @@
       "textinput": "Gold Rush",
       "textalign": "center",
       "fontsize": 18
-    },
-    "style": {
-      "padding": "1em"
     }
   },
   "textdomain": "smark",
