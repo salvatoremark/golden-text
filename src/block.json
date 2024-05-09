@@ -1,14 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "smark/golden-text",
+  "name": "msalv/golden-text",
   "version": "0.1.0",
   "title": "Golden Text",
   "category": "text",
   "icon": "editor-strikethrough",
   "description": "Applies a gold leaf effect to the edges of text in 3D.",
   "supports": {
+    "shadow": true,
     "align": true,
+    "alignWide": true,
     "html": false,
     "color": {
       "background": true,
@@ -24,15 +26,15 @@
       "type": "string",
       "default": "none"
     },
+    "textalign": {
+      "type": "string",
+      "default": "left"
+    },
     "textinput": {
       "type": "string",
       "default": "Gold Rush",
       "source": "text",
       "selector": "div div"
-    },
-    "textalign": {
-      "type": "string",
-      "default": "center"
     },
     "boxwidth": {
       "type": "number",
@@ -61,7 +63,7 @@
       "fontsize": 18
     }
   },
-  "textdomain": "smark",
+  "textdomain": "golden-text",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

@@ -9,25 +9,24 @@ import { useBlockProps } from "@wordpress/block-editor";
  */
 import metadata from "./block.json";
 
-function Save(props) {
-  const { attributes, setAttributes } = props;
-  const inlineStyles = {
-    maxWidth: attributes.boxwidth + "vw",
-    fontSize: attributes.fontsize + "vw",
-    textAlign: attributes.textalign,
-  };
-  const blockProps = useBlockProps.save({
-    className: "wrapper",
-    style: inlineStyles,
-  });
+export default function Save({ attributes }) {
+	const { boxwidth, fontsize, textalign } = attributes;
+	const inlineStyles = {
+		maxWidth: boxwidth + "vw",
+		fontSize: fontsize + "vw",
+		textAlign: textalign,
+	};
+	const blockProps = useBlockProps.save({
+		className: "wrapper",
+		style: inlineStyles,
+	});
 
-  return (
-    <>
-      <div {...blockProps}>
-        <div className='bg'>{__(attributes.textinput, metadata.texdomain)}</div>
-        <div className='fg'>{__(attributes.textinput, metadata.texdomain)}</div>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div {...blockProps}>
+				<div className="bg">{__(textinput, metadata.texdomain)}</div>
+				<div className="fg">{__(textinput, metadata.texdomain)}</div>
+			</div>
+		</>
+	);
 }
-export default Save;
