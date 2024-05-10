@@ -10,11 +10,11 @@ import { useBlockProps } from "@wordpress/block-editor";
 import metadata from "./block.json";
 
 export default function Save({ attributes }) {
-	const { boxwidth, fontsize, textalign } = attributes;
+	const { boxWidth, fontSize, textAlign, textInput } = attributes;
 	const inlineStyles = {
-		maxWidth: boxwidth + "vw",
-		fontSize: fontsize + "vw",
-		textAlign: textalign,
+		maxWidth: boxWidth + "vw",
+		fontSize: fontSize + "vw",
+		textAlign: textAlign,
 	};
 	const blockProps = useBlockProps.save({
 		className: "wrapper",
@@ -24,8 +24,8 @@ export default function Save({ attributes }) {
 	return (
 		<>
 			<div {...blockProps}>
-				<div className="bg">{__(textinput, metadata.texdomain)}</div>
-				<div className="fg">{__(textinput, metadata.texdomain)}</div>
+				<div className="bg">{__(textInput, metadata.texdomain)}</div>
+				<div className="fg">{__(textInput, metadata.texdomain)}</div>
 			</div>
 		</>
 	);

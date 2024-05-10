@@ -8,12 +8,7 @@ import {
 	useBlockProps,
 } from "@wordpress/block-editor";
 
-import {
-	PanelBody,
-	RangeControl,
-	SelectControl,
-	TextControl,
-} from "@wordpress/components";
+import { PanelBody, RangeControl, TextControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 /**
@@ -22,11 +17,11 @@ import { __ } from "@wordpress/i18n";
 import metadata from "./block.json";
 
 function Edit({ attributes, setAttributes }) {
-	const { boxwidth, fontsize, textalign, textinput } = attributes;
+	const { boxWidth, fontSize, textAlign, textInput } = attributes;
 	const inlineStyles = {
-		maxWidth: boxwidth + "vw",
-		fontSize: fontsize + "vw",
-		textAlign: textalign,
+		maxWidth: boxWidth + "vw",
+		fontSize: fontSize + "vw",
+		textAlign: textAlign,
 	};
 	const blockProps = useBlockProps({
 		className: "wrapper",
@@ -35,43 +30,42 @@ function Edit({ attributes, setAttributes }) {
 
 	return (
 		<>
-			<div {...blockProps}>
-				<div className="bg">{__(textinput, metadata.texdomain)}</div>
-				<div className="fg">{__(textinput, metadata.texdomain)}</div>
-			</div>
-
 			<BlockControls>
 				<AlignmentToolbar
-					value={textalign}
-					onChange={(textalign) => setAttributes({ textalign })}
+					value={textAlign}
+					onChange={(textAlign) => setAttributes({ textAlign })}
 				/>
 			</BlockControls>
 			<InspectorControls>
 				<PanelBody
-					title={__("Control Panel", metadata.texdomain)}
+					title={__("Settings", metadata.texdomain)}
 					initialOpen={true}
 				>
 					<TextControl
 						label={__("Text to Slice")}
-						value={textinput}
-						onChange={(textinput) => setAttributes({ textinput })}
+						value={textInput}
+						onChange={(textInput) => setAttributes({ textInput })}
 					/>
 					<RangeControl
 						label="Font Size"
-						value={fontsize}
-						onChange={(fontsize) => setAttributes({ fontsize })}
+						value={fontSize}
+						onChange={(fontSize) => setAttributes({ fontSize })}
 						min={3}
 						max={15}
 					/>
 					<RangeControl
 						label="Box Width"
-						value={boxwidth}
-						onChange={(boxwidth) => setAttributes({ boxwidth })}
+						value={boxWidth}
+						onChange={(boxWidth) => setAttributes({ boxWidth })}
 						min={3}
 						max={100}
 					/>
 				</PanelBody>
 			</InspectorControls>
+			<div {...blockProps}>
+				<div className="bg">{__(textInput, metadata.texdomain)}</div>
+				<div className="fg">{__(textInput, metadata.texdomain)}</div>
+			</div>
 		</>
 	);
 }

@@ -26,41 +26,30 @@
       "type": "string",
       "default": "none"
     },
-    "textalign": {
+    "textAlign": {
       "type": "string",
       "default": "left"
     },
-    "textinput": {
+    "textInput": {
       "type": "string",
       "default": "Gold Rush",
       "source": "text",
       "selector": "div div"
     },
-    "boxwidth": {
+    "boxWidth": {
       "type": "number",
       "default": 47
     },
-    "fontsize": {
+    "fontSize": {
       "type": "number",
       "default": 8
     }
   },
-  "styles": [
-    {
-      "name": "rounded",
-      "label": "Rounded"
-    },
-    {
-      "name": "squared",
-      "label": "Squared",
-      "isDefault": true
-    }
-  ],
   "example": {
     "attributes": {
-      "textinput": "Gold Rush",
-      "textalign": "center",
-      "fontsize": 18
+      "textInput": "Gold Rush",
+      "textAlign": "center",
+      "fontSize": 18
     }
   },
   "textdomain": "golden-text",
